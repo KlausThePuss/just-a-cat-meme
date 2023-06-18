@@ -1,0 +1,120 @@
+body {
+    background-image: url(./pexels-pixabay-531880.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.app {
+    margin: auto;
+    width: 370px;
+    height: 740px;
+    border: 12px solid #000;
+
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 10px 5px 25px #333131;
+}
+.screen {
+    background: url(./8k436w42fxqrt0xb.jpg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 26px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(25, 15, 41, 0.5);
+}
+
+.catImg img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    border: 15px solid #8b435f;
+    outline: 1.5px solid #000;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn button {
+    margin-top: 2rem;
+    padding: 0.6rem 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #8b435f;
+    border: 10px solid #8b435f;
+    outline: 1.5px solid #000;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #150323;
+}
+.btn button:hover {
+    font-size: 24px;
+    margin-top: 1.7rem;
+}
+
+.audio {
+    display: none;
+}
+.title {
+    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 900;
+}
+.notch {
+    width: 200px;
+    height: 28px;
+    background-color: #000;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    left: 88px;
+    top: 0;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+
+    top: 7px;
+    right: 14px;
+}
+.icons img {
+    width: 4.2%;
+    margin: 3px;
+    filter: invert(100%) sepia(69%) saturate(479%) hue-rotate(55deg)
+        brightness(114%) contrast(109%);
+}
+
+.clockStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    left: 20px;
+    top: 9px;
+    font-size: 14px;
+    font-weight: 900;
+    font-family: "Roboto Condensed", sans-serif;
+    filter: invert(100%) sepia(69%) saturate(479%) hue-rotate(55deg)
+        brightness(114%) contrast(109%);
+}
