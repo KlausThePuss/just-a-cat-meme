@@ -1,5 +1,5 @@
-const audio = document.querySelector("audio");
-audio.volume = 0.015;
+/* const audio = document.querySelector("audio");
+audio.volume = 0.015; */
 
 function realTimeClock() {
     var rtClock = new Date();
@@ -19,4 +19,18 @@ function realTimeClock() {
         hours + ":" + minutes + /* ":" + seconds +  */ " " + amPm;
 
     var t = setTimeout(realTimeClock, 500);
+}
+
+var audio = document.getElementById("audio");
+var playPauseBNT = document.getElementById("playPauseBNT");
+var count = 0;
+
+function playPause() {
+    if (count == 0) {
+        count = 1;
+        audio.play();
+    } else {
+        count = 0;
+        audio.pause();
+    }
 }

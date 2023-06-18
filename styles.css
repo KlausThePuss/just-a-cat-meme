@@ -58,13 +58,13 @@ body {
     cursor: pointer;
     color: #150323;
 }
-.btn button:hover {
+.btn button:active {
     font-size: 24px;
     margin-top: 1.7rem;
 }
 
 .audio iframe {
-    display: none;
+    display: block;
 }
 .title {
     margin-bottom: 1rem;
