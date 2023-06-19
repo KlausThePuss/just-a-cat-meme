@@ -4,57 +4,49 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>CAT</title>
+        <title>Just a cat meme</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <body onload="realTimeClock()">
+    <body onload="realTimeClockOnLoad()">
         <header>
-            <div class="app">
-                <div class="screen">
-                    <div class="clockStyle" id="clock">
-                        
-                    </div>
-
-                    <div class="notch"></div>
-                 
-                    <div class="content">
+            <div class="container">
+                <div class="phone">
+                    <div class="screen">
+                        <div class="clockStyle" id="clock"></div>
+                        <div class="notch"></div>
                         <div class="icons">
                             <img src ="cellular.png"/>
                             <img src ="wifi.png"/>
                             <img src ="full-battery.png"/>
-                            
                         </div>
-                        <div class="title">
-                            <h1>
-                                Vilão do anime esperando as protagonistas se
-                                transformarem para a batalha
-                            </h1>
+                        <div class="content1" id="content1">                        
+                            <div class="title1">
+                                
+                                <h1 id="typewriterAnimation"></h1>
+                                <span class="cursorType">|</span>
+                                
+                               
+                                
+                            </div>
+                            <div class="btnOpen"><button id="showMemeBTN" onclick="playAudio(); showMeme();">Quero</button></div>                  
                         </div>
-                        <div class="catImg">
-                            <img src="cat-caramelldansen.gif" alt="cat" />
+                        <div class="content2" id="content2">                        
+                            <div class="title2">
+                                <h1>Vilão do anime esperando as protagonistas se transformarem para a batalha</h1>
+                            </div>
+                            <div class="catImg">
+                                <img src="cat-caramelldansen.gif" alt="cat" />
+                            </div>
+                            <div >                            
+                                <audio id="audio" loop>
+                                    <source src="Caramelldansen from another room (full version) [XuBAVI5fCUM] (copy).mp3" type="audio/mpeg" />
+                                </audio>
+                            </div>
+                            <div class="bntCLose"><button id="hideMemeBTN" onclick="stopAudio(); hideMeme();">X</button></div>                     
                         </div>
-
-                        <div >                            
-                            <audio id="audio">
-                                <source
-                                    src="Caramelldansen from another room (full version) [XuBAVI5fCUM].mp3"
-                                    type="audio/mpeg"
-                                />
-                            </audio>
-                            <div class="btn"><button id="playPauseBTN" onclick="playPause()">Clique Aqui</button></div>
-                            
-                        </div>
-                        
-                            <!--  <iframe width="752" height="423" src="https://www.youtube.com/embed/XuBAVI5fCUM?autoplay=1" title="Caramelldansen from another room (full version)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-                             
-                       
-                        
-                    </div>
-
-                       
                     </div>
                 </div>
             </div>

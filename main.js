@@ -1,13 +1,15 @@
-/* const audio = document.querySelector("audio");
-audio.volume = 0.015; */
+/* //Decrease volume audio (not using)
+const volume = document.querySelector("audio");
+volume.volume = 0.015;
+ */
+//Real time clock
+function realTimeClockOnLoad() {
+    let clockFrame = new Date();
+    let hours = clockFrame.getHours();
+    let minutes = clockFrame.getMinutes(); 
+    let seconds = clockFrame.getSeconds();
 
-function realTimeClock() {
-    var rtClock = new Date();
-    var hours = rtClock.getHours();
-    var minutes = rtClock.getMinutes();
-    var seconds = rtClock.getSeconds();
-
-    var amPm = hours < 12 ? "AM" : "PM";
+    let AMandPM = hours < 12 ? "AM" : "PM";
 
     hours = hours > 12 ? hours - 12 : hours;
 
@@ -16,16 +18,71 @@ function realTimeClock() {
     seconds = ("0" + seconds).slice(-2);
 
     document.getElementById("clock").innerHTML =
-        hours + ":" + minutes + /* ":" + seconds +  */ " " + amPm;
+        hours + ":" + minutes + /* ":" + seconds +  */ " " + AMandPM;
 
-    var t = setTimeout(realTimeClock, 500);
+    let t = setTimeout(realTimeClockOnLoad, 500);
 }
 
-var audio = document.getElementById("audio");
-var playPauseBNT = document.getElementById("playPauseBNT");
-var count = 0;
+//Typewriter animation
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 
-function playPause() {
+  const phrases = ["Olá", "Me chamo KlausThePuss ", "Gostaria de ver um meme?"];
+  const el = document.getElementById("typewriterAnimation");
+
+  let sleepTime = 100;
+
+  let curPhraseIndex = 0;
+
+  const writeLoop = async () => {
+    while (true) {
+      let curWord = phrases[curPhraseIndex];
+
+      for (let i = 0; i < curWord.length; i++) {
+        el.innerText = curWord.substring(0, i + 1);
+        await sleep(sleepTime);
+      }
+
+      await sleep(sleepTime * 22);
+
+      for (let i = curWord.length; i > 0; i--) {
+        el.innerText = curWord.substring(0, i - 1);
+        await sleep(sleepTime);
+      }
+
+      await sleep(sleepTime * 8);
+
+      if (curPhraseIndex === phrases.length - 1) {
+        curPhraseIndex = 0;
+      } else {
+        curPhraseIndex++;
+      }
+    }
+  };
+
+  writeLoop();
+
+//Show meme onClick
+function showMeme() {
+    document.getElementById("content2").style.display="flex"
+    document.getElementById("content1").style.display="none"
+
+}
+
+//Hide meme onClick
+function hideMeme() {
+    document.getElementById("content2").style.display="none"
+    document.getElementById("content1").style.display="flex"
+
+}
+
+//Play audio onClick
+let audio = document.getElementById("audio");
+let showMemeBTN = document.getElementById("showMemeBTN");
+let count = 0;
+
+function playAudio() {
     if (count == 0) {
         count = 1;
         audio.play();
@@ -34,3 +91,16 @@ function playPause() {
         audio.pause();
     }
 }
+
+//Stop audio onClick
+function stopAudio() {
+    playAudio();
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+
+//
+
+
+

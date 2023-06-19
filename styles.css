@@ -5,15 +5,23 @@ body {
     height: 100vh;
     font-family: "Roboto Condensed", sans-serif;
 }
-.app {
-    margin: auto;
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.phone {    
     width: 370px;
     height: 740px;
     border: 12px solid #000;
-
     border-radius: 40px;
     position: relative;
-    box-shadow: 10px 5px 25px #333131;
+    box-shadow: 10px 5px 38px #000000;
 }
 .screen {
     background: url(./8k436w42fxqrt0xb.jpg);
@@ -23,61 +31,130 @@ body {
     background-size: cover;
     border-radius: 26px;
 }
-.content {
+.content2 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(25, 15, 41, 0.6);
+}
+.content1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: rgba(25, 15, 41, 0.5);
 }
 
 .catImg img {
+    margin-bottom: 3rem;
     width: 300px;
     height: 300px;
     border-radius: 50px;
-    border: 15px solid #8b435f;
+    border: 15px solid #D66583;
     outline: 1.5px solid #000;
+    box-shadow: 0px 0px 10px #000;
 }
-.btn {
+.btnOpen {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    
+    
 }
-.btn button {
-    margin-top: 2rem;
+.btnOpen button {
+    box-shadow: 0px 0px 10px #000;
+    margin-top: 15rem;
     padding: 0.6rem 1rem;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    background-color: #8b435f;
-    border: 10px solid #8b435f;
-    outline: 1.5px solid #000;
+    background-color: #D66583;
+    border: 10px solid #D66583;
+    outline: 1.99px solid #291A39;
     border-radius: 15px;
     letter-spacing: 2px;
     cursor: pointer;
     color: #150323;
 }
-.btn button:active {
-    font-size: 24px;
-    margin-top: 1.7rem;
+.btnOpen button:active {
+    font-size: 25px;
+    padding: 1rem 1.4rem;
+    margin-top: 13.8rem;
+}
+.bntCLose {
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    user-select: none; 
+    
+}
+.bntCLose button {
+    box-shadow: 0px 0px 10px #000;
+    padding: 0.4rem 0.8rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #D66583;
+    border: 10px solid #D66583;
+    outline: 1.5px solid #291A39;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #150323; 
+    
+}
+.bntCLose button:active {
+    font-size: 25px;
+    margin: -0.6rem;
+    
+    padding: 0.8rem 1.2rem;
 }
 
-.audio iframe {
-    display: block;
-}
-.title {
-    margin-bottom: 1rem;
+.title1 {
+    margin-top: 7rem;
     padding: 0 1.5rem;
+    
 }
 
-.title h1 {
+.cursorType{
+    color: #D66583;
+    font-size: 45px;
+    animation: blinkCursor 0.7s linear infinite;
+    }
+    @keyframes blinkCursor {
+        0%{
+            opacity: 100%;
+        }
+        50%{
+            opacity: 0%;
+        }
+       }
+
+
+.title1 h1 {
+   display: inline-block;
     color: #fff;
-    font-size: 24px;
-    line-height: 25px;
+    font-size: 27px;
     text-align: center;
     font-weight: 900;
+    text-shadow: 0px 0px 10px #000;
+    font-family: "Roboto Condensed", sans-serif;
 }
+.title2 {
+    margin-bottom: 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .title2 h1 {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 900;
+        text-shadow: 0px 0px 15px #000;
+    }
 .notch {
     width: 200px;
     height: 28px;
